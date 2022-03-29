@@ -224,11 +224,12 @@ all_relations = [
 
 if __name__ == "__main__":
 
-    start_sentence = "PersonX smells smoke in his house"
+    start_sentence = "PersonX eats an apple"
     # NOTE: Need to add the "for PersonX" at the end to help the search converge faster
-    end_sentence = "Firefighers puts out the fire, saving PersonX's house"
+    end_sentence = "PersonX goes home"
     model_path = "./comet-atomic_2020_BART"
     result = bidirectional_bfs(start_sentence=start_sentence, end_sentence=end_sentence, top_k=5, thresh=0.95, model_path=model_path)
+    print(result)
 
     # sample usage
     # print("model loading ...")
